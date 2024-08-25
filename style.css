@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Grey Qo", cursive;
+    font-optical-sizing: auto;
+}
+body{
+
+     background-image: url(Img/fundo.jpg);
+     background-repeat:no-repeat;
+     background-size:100%;
+     background-position:10%;
+}  
+
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: 30%;
+}
+.list {
+    flex:1;
+    text-align: right;
+}
+.list ul li {
+    position: relative;
+    list-style: none;
+    padding: 8px 12px;
+    display: inline-block;
+    font-size: 26px;
+}
+.list ul li a {
+    color:#ffffff;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.active{
+    color:#ffffff !important;
+}
+.text {
+    max-width: 600px;
+    padding: 0 60px 60px 60px;
+}
+.text h2 {
+    font-size: 50px;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .1s;
+    color: rgb(216, 185, 6);
+    font-weight: 900;
+}
+.text span {
+    color:#ccb138cc;
+    font-weight: 600;
+    font-family: "Grey Qo", cursive;
+    
+}
+.text p {
+    padding: 20px 0;
+    color: white;
+    font-size: 26px;
+}
+
+.botoes {
+    width: 50vw;
+    max-width: 800px;
+}
+
+.btn {
+    padding: 30px 30px;
+    background: linear-gradient(#318b0e,#e9b673);
+    color:#0c2c03;
+    border:0;
+    border-radius: 20px;
+    cursor:pointer;
+    transition: 0.5s;
+    margin: 10px 20px;
+    display: inline-block;
+    
+}
+.btn:hover{
+    letter-spacing: 5px;
+}
+.img{
+    position: absolute;
+    right: 0;
+    top:100px;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.img{
+    width: 20%;
+    margin-right: 10%;
+    margin-top: 1%;
+    animation: zoomIn 1s ease forwards,floatImage 4s ease-in-out infinite;
+    animation-delay: 2s, 3s;
+}
+.circle {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#3e99098f,#e29c6d60);
+    clip-path: circle(600px at right 800px);
+}
+@keyframes  slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes floatImage {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes  zoomIn {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
